@@ -1,0 +1,88 @@
+body{
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Sulphur Point', sans-serif;
+  background-image: url(4.png);
+  background-size: 40% 100%, 60% 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+  
+  background-position: left,right;
+  background-repeat: no-repeat,no-repeat;
+  background-attachment: fixed;
+
+  
+}
+
+
+
+
+.button1 {
+    background-color: transparent; 
+    color: #76bdda; 
+    border: 2px solid #76bdda;
+  }
+  
+  .button1:hover {
+    background-color: #295586;
+    color: white;
+  }
+  
+  .button2 {
+    background-color: transparent; 
+    color: #245953; 
+    border: 2px solid #245953;
+  }
+  
+  .button2:hover{
+    background-color: #245953;
+    color: white;
+  }
+
+
+  .button {
+    border-radius: 50px;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    
+  }
+
+
+
+
+  .container{
+    text-align: center;
+    border-radius: 50px;
+    border:5px solid rgb(5, 149, 185);
+    padding:20px;
+    width:50%;
+    height:400px;
+    position:relative;
+    left:667px;
+    top:-465px;
+    justify-content: center;
+  
+}
+
+.one{
+  margin-top: -25px;
+  padding-bottom: 20px;
+}
+
+.two{
+  padding-bottom: 20px;
+}
+
+.three{
+  padding-bottom: 20px;
+}
+
+
