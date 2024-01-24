@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="static/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="static/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/util.css">
+	<link rel="stylesheet" type="text/css" href="static/login.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url(static/bg-01.jpg);">
+					<span class="login100-form-title-1">
+						ADD NEW EMPLOYEE
+					</span>
+				</div>
+
+				<form class="login100-form validate-form" action="{{url_for('empadd')}}" method="post">
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Name is required">
+						<span class="label-input100">Name of the Employee</span>
+						<input class="input100" type="text" name="empname" placeholder="Enter name of the employee" title="Name should be in valid format and non empty." pattern= "[A-Za-z]*" required>
+						<span class="focus-input100"></span>
+					</div>
+
+
+					<div class="wrap-input100 validate-input m-b-27" data-validate="Employee ID is required">
+						<span class="label-input100">Employee ID</span>
+						<input class="input100" type="text" name="empid" placeholder="Enter employee id" required>
+						<span class="focus-input100"></span>
+					</div>
+
+
+					<div class="wrap-input100 validate-input m-b-28" data-validate="Mail ID is required">
+						<span class="label-input100">Mail ID</span>
+						<input class="input100" type="mail" name="mail" placeholder="Enter Mail ID" title="Enter a valid email" pattern="[A-Za-z][A-Za-z0-9]*@gmail.com">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input101 validate-input m-b-28" data-validate="Mail ID is required">
+						<span class="label-input100">Skills of the Employee</span>
+					</div>
+                    <div class="skills-container">
+						
+                        <label for="JAVA"><input type="checkbox" id="JAVA" name="skills" value="JAVA"> JAVA</label>
+                        <label for="PYTHON"><input type="checkbox" id="PYTHON" name="skills" value="PYTHON"> PYTHON</label>
+                        <label for="JAVASCRIPT"><input type="checkbox" id="JAVASCRIPT" name="skills" value="JAVASCRIPT"> JAVASCRIPT</label>
+                        <!-- Add more checkboxes as needed -->
+                        <label for="HTML"><input type="checkbox" id="HTML" name="skills" value="HTML"> HTML</label>
+                        <label for="CSS"><input type="checkbox" id="CSS" name="skills" value="CSS"> CSS</label>
+                        <label for="DJANGO"><input type="checkbox" id="DJANGO" name="skills" value="DJANGO"> DJANGO</label>
+                        <label for="CPP"><input type="checkbox" id="CPP" name="skills" value="CPP"> CPP</label>
+                        <!-- Add more checkboxes as needed -->
+                        <label for="MONGODB"><input type="checkbox" id="MONGODB" name="skills" value="MONGODB"> MONGODB</label>
+                        <label for="PHP"><input type="checkbox" id="PHP" name="skills" value="PHP">PHP</label>
+                        <label for="NODEJS"><input type="checkbox" id="NODEJS" name="skills" value="NODEJS"> NODEJS</label>
+                        <label for="REACT"><input type="checkbox" id="REACT" name="skills" value="REACT"> REACT</label>
+                        <label for="ANGULARJS"><input type="checkbox" id="ANGULARJS" name="skills" value="ANGULARJS"> ANGULARJS</label>
+                        <label for="DSA"><input type="checkbox" id="DSA" name="skills" value="DSA"> DSA</label>
+                        <label for="FLASK"><input type="checkbox" id="FLASK" name="skills" value="FLASK"> FLASK</label>
+                        <label for="MYSQL"><input type="checkbox" id="MYSQL" name="skills" value="MYSQL"> MYSQL</label>
+                    </div>
+
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" type="submit">
+							Add Employee
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+<!--===============================================================================================-->
+	<script src="static/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bootstrap/js/popper.js"></script>
+	<script src="static/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/daterangepicker/moment.min.js"></script>
+	<script src="static/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="static/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="static/main.js"></script>
+
+</body>
+</html>

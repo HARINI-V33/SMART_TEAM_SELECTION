@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>STS</title>
+    <link rel="stylesheet" type="text/css" href="static/proj.css">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Sulphur+Point:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+
+ 
+    
+
+
+  <img src="../static/11.png" alt=""  style="width:39%; margin:10px; border-radius: 50px; margin-top:140px; ">
+
+    <div class="container">
+        <h1 style =" font-size: 60px;">Select Feature</h1>
+        <form id="projinfo-form" method="POST" action="/result">
+            <div class ="one">
+                
+                <a href="empadd"><button type="button" class="button button1" style="font-weight: bold;">Add New Employee</button></a>
+
+            </div>
+            <div class = "two">
+                
+                <a href="remove"><button type="button" class="button button1" style="font-weight: bold;">Remove Employee</button></a>
+            </div>
+
+            <div class = "three">
+                
+                <a href="proj1"><button type="button" class="button button1" style="font-weight: bold;" >Select Smart Team</button></a>
+            </div>
+        </form>
+
+    </div>
+
+    <script>
+        function updateSelectedOptions() {
+            var selectedOptions = [];
+            var selectElement = document.getElementById("skills");
+            var selectedBox = document.getElementById("selectedSkillsBox");
+
+            for (var i = 0; i < selectElement.options.length; i++) {
+                if (selectElement.options[i].selected) {
+                    selectedOptions.push(selectElement.options[i].value);
+                }
+            }
+
+            selectedBox.innerHTML = "Selected Skills: " + selectedOptions.join(", ");
+        }
+    </script>
+
+
+
+
+    
+    <!-- <script>
+        // Add your JavaScript code here if needed
+    </script> -->
+</body>
+</html>

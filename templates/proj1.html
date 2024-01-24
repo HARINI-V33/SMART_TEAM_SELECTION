@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>STS</title>
+    <link rel="stylesheet" type="text/css" href="static/proj1.css">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Sulphur+Point:wght@700&display=swap" rel="stylesheet">
+  
+
+
+
+</head>
+<body>
+    
+    <img src="../static/11.png" alt=""  style="width:39%; margin:10px; border-radius: 50px; margin-top:140px; ">
+    <h1 style="font-size: 55px; font-weight: bolder; top:-15px;">PROJECT DETAILS</h1>
+    <div class="container">
+        <form id="projinfo-form" method="POST" action="/result">
+            <div>
+                <label for="projname" style="color:#27374D;font-style: bol;">Name of the Project:</label>
+                <input type="text" id="projname" name="projname" placeholder="Enter the name of the project" title="Name should be in valid format and non empty." pattern= "[A-Za-z0-9]*.*" required>
+            </div>
+            <div>
+                <label for="teamsize" style="color:#27374D;font-style: bol;">Maximum size limit of the team:</label>
+                <input min="1" type="number" id="teamsize" name="teamsize" placeholder="Enter the size of the team" required>
+            </div>
+            <!-- <div>
+                <label for="size" style="color:#27374D;">Size of the team:</label>
+                <input min="1" type="number" id="size" name="size" placeholder="Enter size of the team" required>
+            </div> -->
+            <div>
+                <label for="skills" style="color:#27374D;">Required Skills:</label>
+            </div>
+            <div class="skills-container">
+                <label for="JAVA"><input type="checkbox" id="JAVA" name="skills" value="JAVA"> JAVA</label>
+                <label for="PYTHON"><input type="checkbox" id="PYTHON" name="skills" value="PYTHON"> PYTHON</label>
+                <label for="JAVASCRIPT"><input type="checkbox" id="JAVASCRIPT" name="skills" value="JAVASCRIPT"> JAVASCRIPT</label>
+                <!-- Add more checkboxes as needed -->
+                <label for="HTML"><input type="checkbox" id="HTML" name="skills" value="HTML"> HTML</label>
+                <label for="CSS"><input type="checkbox" id="CSS" name="skills" value="CSS"> CSS</label>
+                <label for="DJANGO"><input type="checkbox" id="DJANGO" name="skills" value="DJANGO"> DJANGO</label>
+                <label for="CPP"><input type="checkbox" id="CPP" name="skills" value="CPP"> CPP</label>
+                <!-- Add more checkboxes as needed -->
+                <label for="MONGODB"><input type="checkbox" id="MONGODB" name="skills" value="MONGODB"> MONGODB</label>
+                <label for="PHP"><input type="checkbox" id="PHP" name="skills" value="PHP">PHP</label>
+                <label for="NODEJS"><input type="checkbox" id="NODEJS" name="skills" value="NODEJS"> NODEJS</label>
+                <label for="REACT"><input type="checkbox" id="REACT" name="skills" value="REACT"> REACT</label>
+                <label for="ANGULARJS"><input type="checkbox" id="ANGULARJS" name="skills" value="ANGULARJS"> ANGULARJS</label>
+                <label for="DSA"><input type="checkbox" id="DSA" name="skills" value="DSA"> DSA</label>
+                <label for="FLASK"><input type="checkbox" id="FLASK" name="skills" value="FLASK"> FLASK</label>
+                <label for="MYSQL"><input type="checkbox" id="MYSQL" name="skills" value="MYSQL"> MYSQL</label>
+
+            </div>
+
+            <div id="selectedSkillsBox"></div>
+
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    
+    <script>
+        function updateSelectedOptions() {
+            var selectedOptions = [];
+            var selectElement = document.getElementById("skills");
+            var selectedBox = document.getElementById("selectedSkillsBox");
+
+            for (var i = 0; i < selectElement.options.length; i++) {
+                if (selectElement.options[i].selected) {
+                    selectedOptions.push(selectElement.options[i].value);
+                }
+            }
+
+            selectedBox.innerHTML = "Selected Skills: " + selectedOptions.join(", ");
+        }
+    </script>
+    <!-- <script>
+        // Add your JavaScript code here if needed
+    </script> -->
+</body>
+</html>
